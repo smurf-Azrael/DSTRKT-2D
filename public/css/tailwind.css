@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Aktiv Grotesk Ex;
+    src: url(../fonts/Aktiv_Grotesk_Ex_XBold.otf);
+}
+
+body {
+    overflow: hidden;
+}
+
+* {
+    font-family: Aktiv Grotesk Ex!important;
+}
+
+.alice-carousel__prev-btn-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    background-color: #C9F24F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-top: 8px;
+}
+
+.alice-carousel__next-btn-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    background-color: #C9F24F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-top: 8px;
+}
+
+.alice-carousel__prev-btn-item span::after {
+    content: "🡰"!important;
+}
+.alice-carousel__next-btn-item span::after {
+    content: "🡲"!important;
+}
+@media (min-width: 1024px) {
+    .alice-carousel__prev-btn-wrapper {
+        display: none;
+    }
+    .alice-carousel__next-btn-wrapper {
+        display: none;
+    }
+}
+
+@keyframes loading-down {
+    0% {top: 0}
+    100% {top: 100vh}
+}
+
+@keyframes loading-up {
+    0% {top: 100vh}
+    100% {top: 0}
+}
